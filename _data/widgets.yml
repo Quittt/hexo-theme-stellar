@@ -62,17 +62,28 @@ tagcloud:
   start_color: # 开始的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
   end_color: # 结束的颜色。您可使用十六进位值（#b700ff），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
   show_count: false # 显示每个标签的文章总数
-
-timeline:
+newcomment:
   layout: timeline
-  title: 近期动态
-  api: # https://api.github.com/repos/xaoxuu/hexo-theme-stellar/issues
-  user: # 默认显示所有人的数据，设置名称可过滤为仅显示某人的数据，多个名称用英文逗号隔开，不要加空格
-  type: # 默认不用写，如果是友链朋友圈数据请写 fcircle
-  limit: # 默认通过 api 上增加 per_page 来设置，如果是友链朋友圈，可通过这个设置数量
-
+  title: '最新评论'
+  api: https://api.github.com/repos/Quittt/blog-comments/issues
 tagtree:
   layout: tagtree
   expand_all: false # 是否展开所有节点
   expand_active: true # 是否展开当前节点
   show_tagcon: true # 是否显示标签 icon
+welcome:
+  layout: markdown
+  content: |
+    今日诗词:  <span id="jinrishici-sentence"></span>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+welcomeloc:
+  layout: markdown
+  title: '🎉 抓到你啦'
+  linklist:
+    columns: 1
+    items:
+      - icon: '<img src="https://api.iconify.design/ion:dice-outline.svg"/>'
+        title: 随机文章
+        url: 'javascript:toRandomPost()'
+  content: |
+    <span id="welcome-info" style="font-family: LXGW WenKai Screen;"></span>
